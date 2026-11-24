@@ -292,3 +292,22 @@
 @media(max-width:700px){
  .hero-faq-art{width:min(100%,530px);margin:18px auto 0}
 }
+
+.feature-panel--payment{
+ display:grid;grid-template-rows:minmax(0,1fr) auto;
+ align-items:stretch;gap:12px;padding-top:0;
+}
+.feature-panel--payment .feature-payment-art{
+ position:relative;inset:auto;justify-self:end;
+ width:min(77%,380px);height:auto;margin-right:-24px;
+ opacity:1;transform:none;pointer-events:none;
+}
+.feature-panel--payment .feature-payment-art img{
+ position:absolute;top:0;right:0;display:block;
+ max-width:100%;max-height:100%;width:auto;height:auto;
+ mask-image:radial-gradient(ellipse 70% 70% at center,#000 52%,transparent 73%);
+}
+@media(max-width:700px){
+ .feature-panel--payment{min-height:415px}
+ .feature-panel--payment .feature-payment-art{width:min(78%,310px);margin-right:-18px}
+}
