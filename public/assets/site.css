@@ -138,7 +138,7 @@
 @media(max-width:700px){html{scroll-padding-top:70px}.page-hero .wrap{min-height:0;display:block;padding-top:44px;padding-bottom:26px}.page-hero h1{font-size:36px;margin:17px 0}.page-hero p{font-size:13px}.hero-piece{width:170px;margin:0 auto;height:160px;aspect-ratio:unset}.hero-piece .ticket-shape{font-size:37px}.sub-section{padding:49px 0}.sub-heading{font-size:27px;margin:15px 0 20px}.sub-paragraph{font-size:14px;line-height:1.85}.sub-card-grid{grid-template-columns:1fr;margin-top:24px;gap:12px}.sub-card{min-height:0;padding:23px}.sub-callout{padding:18px;font-size:13px}.contact-info-panel{padding:24px;display:block}.contact-info-panel h3{font-size:18px}.contact-info-panel .soft-link{margin-top:12px;white-space:normal}.related-links{gap:8px}.related-links a{padding:10px}.page-related{padding:47px 0}.faqs-list summary{font-size:14px;padding-right:25px}.faqs-list details p{margin-left:0}.breadcrumb{font-size:11px}.footer-links{margin-top:20px;gap:12px}.detail-table{font-size:13px}}
 @media(prefers-reduced-motion:reduce){.hero-slide{transition:none}}
 
-/* First slide: compact V8 layout */
+/* First slide: V10 artwork over the compact layout */
 .hero-slide-original{background:radial-gradient(ellipse at 80% 57%,rgba(141,202,245,.20),transparent 50%),linear-gradient(110deg,#fff 6%,#fafdff 45%,#dcefff 100%)}
 .hero-slide-original::before{display:none}
 .hero-slide-original .hero-over-pill{display:inline-block;background:linear-gradient(95deg,#d8edff,#d1f5f5);border-radius:999px;color:#102f68;letter-spacing:0;font-weight:790;line-height:1.25;}
@@ -157,7 +157,16 @@
 .hero-slide-original .hero-intro-trust strong{display:block;font-size:13px;line-height:1.25}
 .hero-slide-original .hero-intro-trust small{display:block;margin-top:5px;font-size:10px;color:#6a7b8e;white-space:nowrap}
 .hero-slide-original .hero-trust-icon{flex:0 0 39px;height:39px;background:#eaf8fc;border-radius:12px;color:#098dbe;display:grid;place-items:center;font-size:20px}
+.hero-slide-original .hero-intro-art {
+  position: absolute; z-index: 1; bottom: 0; right: -26px;
+  width: min(60vw, 645px);
+  mask-image: linear-gradient(90deg, transparent, #000 5%, #000 96%, transparent);
+}
+.hero-slide-original .hero-intro-art img { display: block; width: 100%; height: auto; }
 @media (min-width: 701px) {
+  .hero:has(.hero-slide-original.on) .hero-controls {
+    left: calc(50% - min(28.5vw, 290px));
+  }
   .hero-slide-original .hero-inner {
     display: grid; grid-template-columns: 53% 47%; align-items: center;
     width: min(1140px, calc(100% - 56px));
@@ -191,17 +200,9 @@
   .hero-slide-original .hero-intro-trust>span+span {
     padding-left: 10px;
   }
-  .hero-slide-original .hero-intro-art {
-    position: relative; top: auto; right: auto;
-    transform: none; width: min(100%, 400px);
-    height: auto; aspect-ratio: auto; overflow: visible;
-    margin: 0 0 38px; justify-self: center;
-  }
-  .hero-slide-original .hero-intro-art img {
-    position: static; display: block;
-    width: 100%; max-width: 100%; height: auto;
-    object-fit: contain;
-  }
+}
+@media (min-width: 701px) and (max-width: 1050px) {
+  .hero-slide-original .hero-intro-art { width: min(61vw, 600px); right: -24px; }
 }
 @media (max-width: 700px) {
   .hero-slide-original .hero-inner {
@@ -246,22 +247,16 @@
     border-radius: 6px;
   }
   .hero-slide-original .hero-intro-art {
-    position: absolute; left: 50%; bottom: 52px;
-    top: auto; right: auto; margin: 0;
-    transform: translateX(-50%);
-    width: min(74%, 255px); height: auto;
-    aspect-ratio: auto; overflow: visible;
+    left: 50%; right: auto; bottom: 52px;
+    transform: translateX(-50%); width: min(100vw, 440px);
   }
-  .hero-slide-original .hero-intro-art img {
-    position: static; width: 100%; max-width: 100%; height: auto;
-    object-fit: contain;
-  }
-  .hero:has(.hero-slide-original.on) .hero-index { bottom: 20px; }
 }
 @media (max-width: 360px) {
   .hero-slide-original .hero-copy .hero-reference-title { font-size: 26px; }
-  .hero-slide-original .hero-intro-art { width: 220px; bottom: 48px; }
   .hero-slide-original .hero-intro-trust small { font-size: 8px; }
+  .hero:has(.hero-slide-original.on) .hero-controls,
+  .hero:has(.hero-slide-original.on) .hero-dots { gap: 4px; }
+  .hero:has(.hero-slide-original.on) .hero-dots button:not([aria-current="true"]) { width: 24px; }
 }
 @media(max-width:700px){.hero:has(.hero-slide-original.on) .hero-index{bottom:4px}}
 @media(prefers-reduced-motion:reduce){.hero-slide-original .hero-cta{transition:none}}
