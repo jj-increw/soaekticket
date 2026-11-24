@@ -43,7 +43,7 @@
     let index=0,paused=false,timer;
     const change=(next)=>{index=(next+slides.length)%slides.length;slides.forEach((el,i)=>{const on=i===index;el.classList.toggle('on',on);el.setAttribute('aria-hidden',String(!on));});[...dots.children].forEach((b,i)=>{b.setAttribute('aria-current',String(i===index));});counter.textContent=String(index+1).padStart(2,'0');};
     slides.forEach((_,i)=>{const dot=document.createElement('button');dot.type='button';dot.setAttribute('aria-label',`배너 ${i+1} 보기`);dot.addEventListener('click',()=>{change(i);restart()});dots.appendChild(dot)});
-    function restart(){clearInterval(timer);if(!paused&&!document.hidden&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches)timer=setInterval(()=>change(index+1),5000)}
+    function restart(){clearInterval(timer);if(!paused&&!document.hidden&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches)timer=setInterval(()=>change(index+1),3500)}
     document.querySelector('#prev').addEventListener('click',()=>{change(index-1);restart()});
     document.querySelector('#next').addEventListener('click',()=>{change(index+1);restart()});
     pause.addEventListener('click',()=>{paused=!paused;pause.textContent=paused?'▶':'Ⅱ';pause.setAttribute('aria-label',paused?'자동 넘김 다시 시작':'자동 넘김 일시정지');restart()});
