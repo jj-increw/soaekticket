@@ -225,3 +225,9 @@
  }
  .hero-slide[data-color="lavender"] .hero-slide04-art img{width:100%}
 }
+
+.hero-guide-art{width:min(108%,600px);justify-self:center;margin-bottom:22px}
+.hero-guide-art img{display:block;width:100%;height:auto}
+@media(max-width:700px){
+ .hero-guide-art{width:min(100%,530px);margin:18px auto 0}
+}
