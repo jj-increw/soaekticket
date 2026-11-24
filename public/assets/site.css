@@ -300,6 +300,43 @@
  display:block;width:100%;height:auto;
 }
 
+/* Homepage ABOUT prose */
+#about .about-copy {
+  max-width: 850px;
+  color: #30505e;
+  font-size: 16px;
+  line-height: 1.9;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+#about .about-copy p { margin: 0; }
+#about .about-copy p + p { margin-top: 1.15em; }
+#about .about-intro { margin-bottom: 45px; }
+#about .about-intro a {
+  color: #176b84;
+  text-decoration: underline;
+  text-underline-offset: .18em;
+}
+#about .about-details { margin: clamp(40px, 6vw, 76px) auto 0; }
+#about .about-details section + section {
+  margin-top: clamp(32px, 5vw, 58px);
+  padding-top: clamp(28px, 4vw, 44px);
+  border-top: 1px solid #cce6e5;
+}
+#about .about-details h3 {
+  margin: 0 0 .75em;
+  color: #173347;
+  font-size: clamp(22px, 3vw, 32px);
+  line-height: 1.35;
+  letter-spacing: -.035em;
+}
+#about .about-summary h3 { text-align: center; }
+#about .about-summary p { text-align: left; }
+@media (max-width: 700px) {
+  #about .about-copy { font-size: 15px; }
+  #about .about-intro { margin-bottom: 32px; }
+}
+
 /* SOAEKTICKET premium service grid – scoped exclusively to .program--premium */
 .program.program--premium {
   --program-ink: #122f44;
