@@ -449,3 +449,22 @@
   #standards .big-visual { height: auto; aspect-ratio: 1312 / 1199; }
   #standards .big-visual img { mask-image: none; }
 }
+
+.channel-talk-fab {
+  position: fixed; z-index: 49; right: 22px; bottom: 83px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+  min-height: 54px; padding: 9px 13px;
+  border: 1px solid rgba(13, 97, 113, .2); border-radius: 15px;
+  background: linear-gradient(135deg, #187d78, #255f98);
+  color: #fff; opacity: 1; cursor: not-allowed;
+  box-shadow: 0 9px 25px rgba(10, 80, 105, .24);
+  line-height: 1.15; text-align: left;
+}
+.channel-talk-fab-icon { flex-shrink: 0; font-size: 21px; line-height: 1; }
+.channel-talk-fab-label { display: block; font-size: 11px; font-weight: 650; white-space: nowrap; }
+.channel-talk-fab-label strong { display: block; margin-top: 3px; font-size: 13px; font-weight: 850; }
+@media (max-width: 700px) {
+  .channel-talk-fab { right: 15px; bottom: 76px; min-height: 49px; padding: 8px 11px; border-radius: 13px; gap: 7px; }
+  .channel-talk-fab-icon { font-size: 19px; }
+  .channel-talk-fab-label strong { font-size: 12px; }
+}
