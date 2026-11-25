@@ -1086,3 +1086,29 @@
 @media (max-width: 700px) {
   .channel-talk-fab { right: 15px; bottom: 87px; }
 }
+
+.credit-card-methods { text-align: left; }
+.credit-card-methods > .wrap { width: min(1200px, calc(100% - 36px)); }
+.credit-methods-copy { max-width: 1000px; }
+.credit-methods-copy .sub-paragraph { max-width: none; overflow-wrap: anywhere; }
+.credit-methods-copy h3, .credit-methods-example h3 {
+  margin: 0 0 8px;
+  font-size: clamp(17px, 2vw, 21px);
+  line-height: 1.5;
+}
+.credit-methods-copy p + h3 { margin-top: 26px; }
+.credit-card-methods .detail-table th:first-child { width: 18%; }
+.credit-card-methods .detail-table tbody th {
+  border-top: 1px solid #e9eeeb;
+  background: #f6fbf9;
+}
+.credit-card-methods .table-scroll:focus-visible { outline: 2px solid #28666a; outline-offset: 3px; }
+.credit-methods-example {
+  margin-top: 24px;
+  padding: clamp(16px, 2vw, 24px);
+  background: #eaf5ef;
+  color: #415e60;
+  line-height: 1.75;
+}
+.credit-methods-example p, .credit-methods-example ul { margin: 8px 0 0; }
+.credit-methods-example ul { padding-inline-start: 20px; }
