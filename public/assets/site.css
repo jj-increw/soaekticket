@@ -738,22 +738,22 @@
   #process .process-step:hover { transform: translateY(-2px); box-shadow: 0 10px 19px #248e8426; }
 }
 
-.page-hero:is(.mobile-payment-hero, .credit-card-hero) {
+.page-hero:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero) {
   border: 0;
   background: linear-gradient(155deg, #f7fcfb, #e3f4f0);
 }
-:is(.mobile-payment-hero, .credit-card-hero)::before,
-:is(.mobile-payment-hero, .credit-card-hero)::after { content: none; }
-:is(.mobile-payment-hero, .credit-card-hero) .wrap {
+:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero)::before,
+:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero)::after { content: none; }
+:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero) .wrap {
   display: flex;
   width: min(1440px, calc(100% - 8%));
   min-height: max(520px, 46.5vw);
   padding-block: clamp(28px, 4vw, 54px);
 }
-:is(.mobile-payment-hero, .credit-card-hero) .page-hero-copy { width: 52%; text-align: left; overflow-wrap: anywhere; }
-:is(.mobile-payment-hero, .credit-card-hero) h1 span { color: #0b7469; }
-:is(.mobile-payment-hero, .credit-card-hero) p { max-width: 630px; margin: 0; font-size: clamp(15px, 1.25vw, 17px); }
-:is(.mobile-payment-hero, .credit-card-hero) p + p { margin-top: 14px; }
+:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero) .page-hero-copy { width: 52%; text-align: left; overflow-wrap: anywhere; }
+:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero) h1 span { color: #0b7469; }
+:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero) p { max-width: 630px; margin: 0; font-size: clamp(15px, 1.25vw, 17px); }
+:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero) p + p { margin-top: 14px; }
 .mobile-payment-hero-points {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -788,8 +788,8 @@
   object-position: right bottom;
 }
 @media (max-width: 1000px) {
-  :is(.mobile-payment-hero, .credit-card-hero) .wrap { display: block; width: min(670px, calc(100% - 36px)); min-height: 0; padding-bottom: 14px; }
-  :is(.mobile-payment-hero, .credit-card-hero) .page-hero-copy { width: auto; }
+  :is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero) .wrap { display: block; width: min(670px, calc(100% - 36px)); min-height: 0; padding-bottom: 14px; }
+  :is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero) .page-hero-copy { width: auto; }
   .mobile-payment-hero-image {
     position: relative;
     height: auto;
@@ -798,7 +798,7 @@
   }
 }
 @media (max-width: 700px) {
-  :is(.mobile-payment-hero, .credit-card-hero) h1 { font-size: clamp(30px, 8vw, 38px); }
+  :is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero) h1 { font-size: clamp(30px, 8vw, 38px); }
   .mobile-payment-hero-points { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
@@ -1077,4 +1077,33 @@
 }
 @media (min-width: 701px) {
   .credit-guide-example a { display: none; }
+}
+
+.page-hero.giftcard-hero {
+  background: linear-gradient(155deg, #f4fbfc, #dff6f8);
+}
+.giftcard-hero h1 { color: #172f42; }
+.giftcard-hero strong { color: #0b655e; }
+.giftcard-hero-image {
+  position: absolute;
+  inset: 50% 0 auto;
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: translateY(-50%);
+  mask-image: linear-gradient(transparent, #000 10%, #000 90%, transparent);
+}
+@media (min-width: 1001px) {
+  .giftcard-hero .page-hero-copy { width: 45%; }
+}
+@media (max-width: 1000px) {
+  .giftcard-hero-image {
+    position: relative;
+    inset: auto;
+    transform: none;
+    aspect-ratio: 1.6;
+    object-fit: cover;
+    object-position: 82% center;
+    mask-image: linear-gradient(transparent, #000 10%);
+  }
 }
