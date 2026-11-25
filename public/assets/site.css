@@ -1051,3 +1051,13 @@
 .credit-methods-example { padding-inline: 17px; }
 .credit-methods-example p, .credit-methods-example ul { margin: 8px 0 0; }
 .credit-methods-example ul { padding-inline-start: 20px; }
+
+.credit-guide-figure {
+  width: min(100%, 900px);
+  margin: 32px auto;
+}
+.credit-guide-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
