@@ -826,6 +826,16 @@
   line-height: 1.4;
 }
 .mobile-payment-copy strong { color: #17645f; }
+.mobile-payment-copy .mobile-payment-illustration {
+  max-width: 1000px;
+  margin: 22px auto 0;
+}
+.mobile-payment-illustration img { display: block; width: 100%; height: auto; }
+.mobile-payment-illustration figcaption { display: none; }
+@media (max-width: 700px) {
+  .mobile-payment-illustration figcaption { display: block; margin-top: 8px; }
+  .mobile-payment-illustration a { color: #17645f; font-size: 14px; text-decoration: underline; }
+}
 #troubleshooting .mobile-payment-copy p { line-height: 1.8; }
 #troubleshooting .sub-card-grid { margin-top: 4px; }
 #troubleshooting .sub-card h4 {
