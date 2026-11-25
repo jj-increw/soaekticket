@@ -835,6 +835,13 @@
   word-break: keep-all;
 }
 #troubleshooting .mobile-troubleshooting-summary { margin-top: 24px; }
+#billing .mobile-billing-note {
+  margin-top: 30px;
+  padding: 17px 0;
+  border-top: 1px solid #cce5e4;
+  background: #e9f7f3;
+}
+#billing .mobile-billing-note h3 { margin-top: 0; }
 #limits .mobile-payment-copy h4 {
   margin: 22px 0 10px;
   color: #193b4a;
