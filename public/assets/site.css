@@ -811,27 +811,44 @@
 .credit-card-hero .wrap {
   display: flex;
   width: min(1440px, calc(100% - 8%));
-  min-height: max(520px, 40vw);
-  padding-block: clamp(28px, 4vw, 54px);
+  min-height: clamp(590px, 32vw, 600px);
+  padding-block: 32px;
 }
 .credit-card-hero .page-hero-copy { width: 50%; text-align: left; overflow-wrap: anywhere; }
 .credit-card-hero h1 { color: #172f42; }
 .credit-card-hero h1 span { color: #0b7469; }
-.credit-card-hero p { max-width: 630px; margin: 0; font-size: clamp(15px, 1.25vw, 17px); }
-.credit-card-hero p + p { margin-top: 14px; }
+.credit-card-hero p,
+.credit-card-hero-details p {
+  max-width: 630px;
+  margin: 0;
+  color: #52686b;
+  font-size: clamp(15px, 1.25vw, 17px);
+  line-height: 1.75;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.credit-card-hero p + p,
+.credit-card-hero-details p + p { margin-top: 12px; }
+.credit-card-hero-details { padding: 24px 0 0; text-align: left; }
+.credit-card-hero-details .wrap { width: min(1440px, calc(100% - 8%)); }
+.credit-card-hero-details p { max-width: 960px; }
 .credit-card-hero-image {
   position: absolute;
-  inset: auto 0 0;
+  inset: 50% 0 auto;
   display: block;
   width: 100%;
   height: auto;
-  mask-image: linear-gradient(transparent, #000 18%);
+  transform: translateY(-50%);
+  mask-image: linear-gradient(transparent, #000 9%, #000 91%, transparent);
 }
 @media (max-width: 1000px) {
   .credit-card-hero .wrap { display: block; width: min(670px, calc(100% - 36px)); min-height: 0; padding-bottom: 16px; }
+  .credit-card-hero-details .wrap { width: min(670px, calc(100% - 36px)); }
   .credit-card-hero .page-hero-copy { width: auto; }
   .credit-card-hero-image {
     position: relative;
+    inset: auto;
+    transform: none;
     aspect-ratio: 1.37;
     object-fit: cover;
     object-position: right center;
