@@ -317,7 +317,7 @@
   text-decoration: underline;
   text-underline-offset: .18em;
 }
-#about .about-details { margin: clamp(40px, 6vw, 76px) auto 0; }
+#about .about-details { margin: clamp(40px, 6vw, 76px) 0 0; }
 #about .about-details section + section {
   margin-top: clamp(32px, 5vw, 58px);
   padding-top: clamp(28px, 4vw, 44px);
@@ -558,7 +558,7 @@
 #standards .principles-closing p { margin: 0; }
 #standards .principles-copy p + p,
 #standards .principles-closing p + p { margin-top: 13px; }
-#standards .principles-closing { max-width: 920px; margin: 42px auto 0; }
+#standards .principles-closing { max-width: 920px; margin: 42px 0 0; }
 #standards .principles-closing h3 {
   margin: 0 0 15px;
   color: #193b4a;
