@@ -826,6 +826,15 @@
   line-height: 1.4;
 }
 .mobile-payment-copy strong { color: #17645f; }
+#troubleshooting .mobile-payment-copy p { line-height: 1.8; }
+#troubleshooting .sub-card-grid { margin-top: 4px; }
+#troubleshooting .sub-card h4 {
+  margin: 18px 0 12px;
+  font-size: 19px;
+  letter-spacing: -.05em;
+  word-break: keep-all;
+}
+#troubleshooting .mobile-troubleshooting-summary { margin-top: 24px; }
 #limits .mobile-payment-copy h4 {
   margin: 22px 0 10px;
   color: #193b4a;
