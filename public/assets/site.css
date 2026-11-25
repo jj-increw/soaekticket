@@ -332,6 +332,7 @@
 }
 #about .about-summary h3 { text-align: center; }
 #about .about-summary p { text-align: left; }
+#about-payment-heading { scroll-margin-top: 120px; }
 @media (max-width: 700px) {
   #about .about-copy { font-size: 15px; }
   #about .about-intro { margin-bottom: 32px; }
