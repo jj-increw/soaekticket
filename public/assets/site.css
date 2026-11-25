@@ -738,6 +738,30 @@
   #process .process-step:hover { transform: translateY(-2px); box-shadow: 0 10px 19px #248e8426; }
 }
 
+.page-hero.mobile-payment-hero { background: linear-gradient(125deg, #f9fdfc, #e2f3ee); }
+.mobile-payment-hero::before,
+.mobile-payment-hero::after { content: none; }
+.mobile-payment-hero .wrap {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(22px, 4vw, 60px);
+  padding-block: clamp(28px, 4vw, 54px);
+}
+.mobile-payment-hero .page-hero-copy { text-align: left; overflow-wrap: anywhere; }
+.mobile-payment-hero p { margin: 0; font-size: clamp(15px, 1.25vw, 17px); }
+.mobile-payment-hero p + p { margin-top: 14px; }
+.mobile-payment-hero-image {
+  display: block;
+  justify-self: end;
+  width: min(100%, 440px);
+  height: auto;
+  border-radius: 20px;
+}
+@media (max-width: 700px) {
+  .mobile-payment-hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr); }
+  .mobile-payment-hero h1 { font-size: clamp(30px, 8vw, 38px); }
+  .mobile-payment-hero-image { justify-self: center; border-radius: 15px; }
+}
+
 .home-faq { background: linear-gradient(160deg, #fff 35%, #f1faf8); }
 .home-faq .section-desc { max-width: 720px; margin-bottom: 28px; }
 .home-faq .site-faq-list { scroll-margin-top: 24px; }
