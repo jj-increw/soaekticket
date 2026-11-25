@@ -842,6 +842,24 @@
   .credit-card-hero h1 { font-size: clamp(30px, 8vw, 38px); }
 }
 
+.credit-card-overview { text-align: left; }
+.credit-card-overview > .wrap > :is(.section-eyebrow, .sub-heading, .credit-overview-copy, .sub-card-grid) {
+  max-width: 960px;
+  margin-inline: auto;
+}
+.credit-overview-copy { word-break: keep-all; overflow-wrap: anywhere; }
+.credit-overview-copy p { margin: 0; color: #52676d; font-size: clamp(15px, 1.2vw, 17px); line-height: 1.85; }
+.credit-overview-copy p + p { margin-top: 15px; }
+.credit-overview-copy h3 { margin: 32px 0 12px; color: #172f42; font-size: clamp(20px, 1.8vw, 24px); line-height: 1.4; }
+.credit-overview-copy strong { color: #17645f; }
+.credit-card-overview .sub-card-grid { grid-auto-rows: 1fr; margin-top: 4px; }
+.credit-card-overview .sub-card { min-height: 0; padding: clamp(18px, 2vw, 24px); border-color: #d4e9e4; }
+.credit-card-overview .sub-card h4 { margin: 12px 0 8px; font-size: 19px; line-height: 1.4; }
+.credit-card-overview .sub-card p { overflow-wrap: anywhere; }
+@media (min-width: 1051px) {
+  .credit-card-overview > .wrap { width: min(1200px, calc(100% - 56px)); }
+}
+
 .mobile-payment-content { text-align: left; }
 .mobile-payment-content > .wrap > :is(.section-eyebrow, .sub-heading, .mobile-payment-copy, .sub-card-grid) {
   max-width: 960px;
