@@ -742,44 +742,64 @@
   border: 0;
   background: linear-gradient(155deg, #f7fcfb, #e3f4f0);
 }
-.mobile-payment-hero::before {
-  inset: 0;
-  z-index: 1;
-  width: auto;
-  height: auto;
-  border: 0;
-  border-radius: 0;
-  background: linear-gradient(90deg, #f4fbfa 0%, #f4fbfa99 35%, transparent 62%);
-  pointer-events: none;
-}
+.mobile-payment-hero::before,
 .mobile-payment-hero::after { content: none; }
 .mobile-payment-hero .wrap {
   display: flex;
-  min-height: max(440px, 44.3vw);
+  width: min(1440px, calc(100% - 8%));
+  min-height: max(520px, 46.5vw);
   padding-block: clamp(28px, 4vw, 54px);
 }
-.mobile-payment-hero .page-hero-copy { width: 49%; text-align: left; overflow-wrap: anywhere; }
-.mobile-payment-hero p { margin: 0; font-size: clamp(15px, 1.25vw, 17px); }
+.mobile-payment-hero .page-hero-copy { width: 52%; text-align: left; overflow-wrap: anywhere; }
+.mobile-payment-hero h1 span { color: #0b7469; }
+.mobile-payment-hero p { max-width: 630px; margin: 0; font-size: clamp(15px, 1.25vw, 17px); }
 .mobile-payment-hero p + p { margin-top: 14px; }
-.mobile-payment-hero-art { position: absolute; inset: 0; display: block; }
+.mobile-payment-hero-points {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  max-width: 630px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.mobile-payment-hero-points li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 44px;
+  padding: 7px 9px;
+  border-radius: 8px;
+  background: #ffffffb8;
+  color: #164950;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+.mobile-payment-hero-points svg { flex: 0 0 23px; width: 23px; height: 23px; color: #11776b; }
 .mobile-payment-hero-image {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: right bottom;
 }
-@media (max-width: 700px) {
-  .mobile-payment-hero::before { content: none; }
-  .mobile-payment-hero .wrap { display: block; min-height: 0; padding-bottom: 16px; }
+@media (max-width: 1000px) {
+  .mobile-payment-hero .wrap { display: block; width: min(670px, calc(100% - 36px)); min-height: 0; padding-bottom: 14px; }
   .mobile-payment-hero .page-hero-copy { width: auto; }
-  .mobile-payment-hero h1 { font-size: clamp(30px, 8vw, 38px); }
-  .mobile-payment-hero-art { position: relative; }
   .mobile-payment-hero-image {
+    position: relative;
     height: auto;
-    aspect-ratio: 787 / 859;
-    mask-image: linear-gradient(transparent, #000 9%);
+    aspect-ratio: 100 / 97;
+    mask-image: linear-gradient(transparent, #000 10%);
   }
+}
+@media (max-width: 700px) {
+  .mobile-payment-hero h1 { font-size: clamp(30px, 8vw, 38px); }
+  .mobile-payment-hero-points { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 .mobile-payment-overview { background: #fff; text-align: left; }
