@@ -867,11 +867,6 @@
   #limits .mobile-limit-guide-view img { width: 720px; max-width: none; }
   #limits .mobile-limit-guide-hint { display: block; }
 }
-.mobile-payment-copy a {
-  color: #17645f;
-  text-decoration: underline;
-  text-underline-offset: .18em;
-}
 
 .home-faq { background: linear-gradient(160deg, #fff 35%, #f1faf8); }
 .home-faq .section-desc { max-width: 720px; margin-bottom: 28px; }
