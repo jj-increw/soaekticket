@@ -826,6 +826,17 @@
   line-height: 1.45;
   word-break: keep-all;
 }
+#limits .mobile-limit-guide {
+  max-width: 880px;
+  margin: 20px 0 13px;
+}
+#limits .mobile-limit-guide img { display: block; width: 100%; height: auto; }
+#limits .mobile-limit-guide figcaption {
+  margin-top: 8px;
+  color: #52676d;
+  font-size: 13px;
+  line-height: 1.6;
+}
 .mobile-payment-copy a {
   color: #17645f;
   text-decoration: underline;
