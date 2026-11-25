@@ -488,6 +488,11 @@
   #standards .big-visual img { mask-image: none; }
 }
 
+#standards .big-text { padding-block: clamp(42px, 5vw, 64px); }
+#standards .big-text p { margin: 0; }
+#standards .big-text p + p { margin-top: 14px; }
+#standards .big-text strong { font-weight: 600; }
+
 .channel-talk-fab {
   position: fixed; z-index: 49; right: 22px; bottom: 83px;
   display: inline-flex; align-items: center; justify-content: center; gap: 9px;
