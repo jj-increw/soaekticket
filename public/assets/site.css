@@ -738,22 +738,22 @@
   #process .process-step:hover { transform: translateY(-2px); box-shadow: 0 10px 19px #248e8426; }
 }
 
-.page-hero.mobile-payment-hero {
+.page-hero:is(.mobile-payment-hero, .credit-card-hero) {
   border: 0;
   background: linear-gradient(155deg, #f7fcfb, #e3f4f0);
 }
-.mobile-payment-hero::before,
-.mobile-payment-hero::after { content: none; }
-.mobile-payment-hero .wrap {
+:is(.mobile-payment-hero, .credit-card-hero)::before,
+:is(.mobile-payment-hero, .credit-card-hero)::after { content: none; }
+:is(.mobile-payment-hero, .credit-card-hero) .wrap {
   display: flex;
   width: min(1440px, calc(100% - 8%));
   min-height: max(520px, 46.5vw);
   padding-block: clamp(28px, 4vw, 54px);
 }
-.mobile-payment-hero .page-hero-copy { width: 52%; text-align: left; overflow-wrap: anywhere; }
-.mobile-payment-hero h1 span { color: #0b7469; }
-.mobile-payment-hero p { max-width: 630px; margin: 0; font-size: clamp(15px, 1.25vw, 17px); }
-.mobile-payment-hero p + p { margin-top: 14px; }
+:is(.mobile-payment-hero, .credit-card-hero) .page-hero-copy { width: 52%; text-align: left; overflow-wrap: anywhere; }
+:is(.mobile-payment-hero, .credit-card-hero) h1 span { color: #0b7469; }
+:is(.mobile-payment-hero, .credit-card-hero) p { max-width: 630px; margin: 0; font-size: clamp(15px, 1.25vw, 17px); }
+:is(.mobile-payment-hero, .credit-card-hero) p + p { margin-top: 14px; }
 .mobile-payment-hero-points {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -788,8 +788,8 @@
   object-position: right bottom;
 }
 @media (max-width: 1000px) {
-  .mobile-payment-hero .wrap { display: block; width: min(670px, calc(100% - 36px)); min-height: 0; padding-bottom: 14px; }
-  .mobile-payment-hero .page-hero-copy { width: auto; }
+  :is(.mobile-payment-hero, .credit-card-hero) .wrap { display: block; width: min(670px, calc(100% - 36px)); min-height: 0; padding-bottom: 14px; }
+  :is(.mobile-payment-hero, .credit-card-hero) .page-hero-copy { width: auto; }
   .mobile-payment-hero-image {
     position: relative;
     height: auto;
@@ -798,36 +798,10 @@
   }
 }
 @media (max-width: 700px) {
-  .mobile-payment-hero h1 { font-size: clamp(30px, 8vw, 38px); }
+  :is(.mobile-payment-hero, .credit-card-hero) h1 { font-size: clamp(30px, 8vw, 38px); }
   .mobile-payment-hero-points { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-.page-hero.credit-card-hero {
-  border: 0;
-  background: linear-gradient(105deg, #f5fbfc 10%, #e8f8f9 50%, #bdeeed);
-}
-.credit-card-hero::before,
-.credit-card-hero::after { content: none; }
-.credit-card-hero .wrap {
-  display: flex;
-  width: min(1440px, calc(100% - 8%));
-  height: auto;
-  min-height: clamp(590px, 32vw, 600px);
-  padding-block: 32px;
-}
-.credit-card-hero .page-hero-copy { width: 50%; text-align: left; overflow-wrap: anywhere; }
-.credit-card-hero h1 { color: #172f42; }
-.credit-card-hero h1 span { color: #0b7469; }
-.credit-card-hero p {
-  max-width: 630px;
-  margin: 0;
-  color: #52686b;
-  font-size: clamp(15px, 1.25vw, 17px);
-  line-height: 1.75;
-  word-break: keep-all;
-  overflow-wrap: anywhere;
-}
-.credit-card-hero p + p { margin-top: 12px; }
 .credit-card-hero-image {
   position: absolute;
   inset: 50% 0 auto;
@@ -838,8 +812,6 @@
   mask-image: linear-gradient(transparent, #000 9%, #000 91%, transparent);
 }
 @media (max-width: 1000px) {
-  .credit-card-hero .wrap { display: block; width: min(670px, calc(100% - 36px)); min-height: 0; padding-bottom: 16px; }
-  .credit-card-hero .page-hero-copy { width: auto; }
   .credit-card-hero-image {
     position: relative;
     inset: auto;
@@ -850,45 +822,31 @@
     mask-image: linear-gradient(transparent, #000 13%);
   }
 }
-@media (max-width: 700px) {
-  .credit-card-hero h1 { font-size: clamp(30px, 8vw, 38px); }
-}
 
-
-.credit-overview-copy { word-break: keep-all; overflow-wrap: anywhere; }
-.credit-overview-copy p { margin: 0; color: #52676d; font-size: clamp(15px, 1.2vw, 17px); line-height: 1.85; }
-.credit-overview-copy p + p { margin-top: 15px; }
-.credit-overview-copy h3 { margin: 32px 0 12px; color: #172f42; font-size: clamp(20px, 1.8vw, 24px); line-height: 1.4; }
-.credit-overview-copy strong { color: #17645f; }
-.credit-card-overview .sub-card-grid { grid-auto-rows: 1fr; margin-top: 4px; }
-.credit-card-overview .sub-card { min-height: 0; padding: clamp(18px, 2vw, 24px); border-color: #d4e9e4; }
-.credit-card-overview .sub-card h4 { margin: 12px 0 8px; font-size: 19px; line-height: 1.4; }
-.credit-card-overview .sub-card p { overflow-wrap: anywhere; }
-
-.mobile-payment-content { text-align: left; }
-.mobile-payment-content > .wrap > :is(.section-eyebrow, .sub-heading, .mobile-payment-copy, .sub-card-grid) {
+:is(.mobile-payment-content, .credit-card-content) { text-align: left; }
+:is(.mobile-payment-content, .credit-card-content) > .wrap > :is(.section-eyebrow, .sub-heading, .mobile-payment-copy, .credit-card-copy, .sub-card-grid, .credit-methods-example, .table-scroll) {
   max-width: 960px;
   margin-inline: auto;
 }
-.mobile-payment-content .sub-heading { color: #172f42; }
-.mobile-payment-copy { word-break: keep-all; overflow-wrap: anywhere; }
+:is(.mobile-payment-content, .credit-card-content) .sub-heading { color: #172f42; }
+:is(.mobile-payment-copy, .credit-card-copy) { word-break: keep-all; overflow-wrap: anywhere; }
 @media (min-width: 1051px) {
-  .mobile-payment-content > .wrap { width: min(1200px, calc(100% - 56px)); }
+  :is(.mobile-payment-content, .credit-card-content) > .wrap { width: min(1200px, calc(100% - 56px)); }
 }
-.mobile-payment-copy p {
+:is(.mobile-payment-copy, .credit-card-copy) p {
   margin: 0;
   color: #52676d;
   font-size: clamp(15px, 1.2vw, 17px);
   line-height: 1.9;
 }
-.mobile-payment-copy p + p { margin-top: 15px; }
-.mobile-payment-copy h3 {
+:is(.mobile-payment-copy, .credit-card-copy) p + p { margin-top: 15px; }
+:is(.mobile-payment-copy, .credit-card-copy) h3 {
   margin: 33px 0 12px;
   color: #172f42;
   font-size: clamp(20px, 1.8vw, 24px);
   line-height: 1.4;
 }
-.mobile-payment-copy strong { color: #17645f; }
+:is(.mobile-payment-copy, .credit-card-copy) strong { color: #17645f; }
 .mobile-payment-copy .mobile-payment-illustration {
   max-width: 1000px;
   margin: 22px auto 0;
@@ -907,21 +865,24 @@
   .mobile-payment-illustration a { color: #17645f; font-size: 14px; text-decoration: underline; }
 }
 #troubleshooting .mobile-payment-copy p { line-height: 1.8; }
-#troubleshooting .sub-card-grid { margin-top: 4px; }
-#troubleshooting .sub-card h4 {
+:is(#troubleshooting, .credit-card-overview) .sub-card-grid { margin-top: 4px; }
+:is(#troubleshooting, .credit-card-overview) .sub-card h4 {
   margin: 18px 0 12px;
   font-size: 19px;
   letter-spacing: -.05em;
   word-break: keep-all;
 }
 #troubleshooting .mobile-troubleshooting-summary { margin-top: 24px; }
-#billing .mobile-billing-note {
+#billing .mobile-billing-note,
+.credit-card-copy .sub-callout,
+.credit-methods-example {
   margin-top: 30px;
   padding: 17px 0;
   border-top: 1px solid #cce5e4;
   background: #e9f7f3;
 }
-#billing .mobile-billing-note h3 { margin-top: 0; }
+#billing .mobile-billing-note h3,
+.credit-methods-example h3 { margin-top: 0; }
 #limits .mobile-payment-copy h4 {
   margin: 22px 0 10px;
   color: #193b4a;
@@ -1080,39 +1041,13 @@
   .channel-talk-fab { right: 15px; bottom: 87px; }
 }
 
-.wrap.credit-section-container,
-.page-related.service-navigation .credit-section-container {
-  width: min(1200px, calc(100% - 36px));
-  margin-inline: auto;
-  text-align: left;
-}
-.credit-section-container .credit-section-content {
-  max-width: 1000px;
-  min-width: 0;
-  overflow-wrap: anywhere;
-}
-.page-related.service-navigation .credit-section-container {
-  grid-template-columns: minmax(0, 1fr);
-}
-.credit-methods-copy .sub-paragraph { max-width: none; overflow-wrap: anywhere; }
-.credit-methods-copy h3, .credit-methods-example h3 {
-  margin: 0 0 8px;
-  font-size: clamp(17px, 2vw, 21px);
-  line-height: 1.5;
-}
-.credit-methods-copy p + h3 { margin-top: 26px; }
 .credit-card-methods .detail-table th:first-child { width: 18%; }
 .credit-card-methods .detail-table tbody th {
   border-top: 1px solid #e9eeeb;
   background: #f6fbf9;
 }
 .credit-card-methods .table-scroll:focus-visible { outline: 2px solid #28666a; outline-offset: 3px; }
-.credit-methods-example {
-  margin-top: 24px;
-  padding: clamp(16px, 2vw, 24px);
-  background: #eaf5ef;
-  color: #415e60;
-  line-height: 1.75;
-}
+.credit-card-copy .sub-callout { border-left: 0; }
+.credit-methods-example { padding-inline: 17px; }
 .credit-methods-example p, .credit-methods-example ul { margin: 8px 0 0; }
 .credit-methods-example ul { padding-inline-start: 20px; }
