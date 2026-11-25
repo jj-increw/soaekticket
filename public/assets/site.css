@@ -755,7 +755,7 @@
 .mobile-payment-hero::after { content: none; }
 .mobile-payment-hero .wrap {
   display: flex;
-  min-height: max(440px, 50vw);
+  min-height: max(440px, 44.3vw);
   padding-block: clamp(28px, 4vw, 54px);
 }
 .mobile-payment-hero .page-hero-copy { width: 49%; text-align: left; overflow-wrap: anywhere; }
@@ -777,8 +777,8 @@
   .mobile-payment-hero-art { position: relative; }
   .mobile-payment-hero-image {
     height: auto;
-    aspect-ratio: 836 / 941;
-    mask-image: linear-gradient(transparent, #000 14%);
+    aspect-ratio: 787 / 859;
+    mask-image: linear-gradient(transparent, #000 9%);
   }
 }
 
