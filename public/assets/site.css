@@ -652,6 +652,20 @@
   #process .process-step:hover { transform: translateY(-2px); box-shadow: 0 10px 19px #248e8426; }
 }
 
+#news .news-head { display: block; }
+#news .news-head .section-title { margin-bottom: 0; }
+#news .news-card {
+  text-align: left;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+#news .news-card p {
+  margin: 0;
+  color: #465d60;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
 .channel-talk-fab {
   position: fixed; z-index: 49; right: 22px; bottom: 83px;
   display: inline-flex; align-items: center; justify-content: center; gap: 9px;
