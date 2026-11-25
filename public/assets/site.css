@@ -1061,3 +1061,9 @@
   width: 100%;
   height: auto;
 }
+
+.credit-guide-figure figcaption { display: none; }
+@media (max-width: 700px) {
+  .credit-guide-figure figcaption { display: block; margin-top: 8px; }
+  .credit-guide-figure a { color: #17645f; font-size: 14px; text-decoration: underline; }
+}
