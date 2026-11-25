@@ -484,14 +484,46 @@
   mask-composite: intersect;
 }
 @media (max-width: 700px) {
+  /* The image comes before the heading on mobile. */
+  #standards { scroll-margin-top: -56px; }
   #standards .big-visual { height: auto; aspect-ratio: 1312 / 1199; }
   #standards .big-visual img { mask-image: none; }
 }
 
-#standards .big-text { padding-block: clamp(42px, 5vw, 64px); }
+#standards .big-text {
+  padding-block: clamp(42px, 5vw, 64px);
+  text-align: left;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
 #standards .big-text p { margin: 0; }
-#standards .big-text p + p { margin-top: 14px; }
-#standards .big-text strong { font-weight: 600; }
+#standards .standards-list {
+  max-width: 510px;
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+}
+#standards .standards-list li {
+  display: grid;
+  grid-template-columns: 2ch minmax(0, 1fr);
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid #a2d8cd45;
+}
+#standards .standards-list li:last-child { padding-bottom: 0; }
+#standards .standards-number {
+  color: #a2d8cd;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 24px;
+}
+#standards .standards-list h3 {
+  margin: 0 0 4px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+}
 
 #process {
   padding: clamp(38px, 5.2vw, 76px) 0;
