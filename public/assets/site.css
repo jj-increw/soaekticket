@@ -802,47 +802,24 @@
   .mobile-payment-hero-points { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-.mobile-payment-overview { background: #fff; text-align: left; }
-.mobile-payment-overview .sub-heading { color: #172f42; }
-.mobile-overview-copy { max-width: 830px; }
-.mobile-overview-copy .sub-paragraph {
+.mobile-payment-content { text-align: left; }
+.mobile-payment-content .sub-heading { color: #172f42; }
+.mobile-payment-copy { max-width: 830px; word-break: keep-all; overflow-wrap: anywhere; }
+.mobile-payment-copy p {
   margin: 0;
+  color: #52676d;
   font-size: clamp(15px, 1.2vw, 17px);
-  line-height: 1.85;
-  overflow-wrap: anywhere;
+  line-height: 1.9;
 }
-.mobile-overview-copy .sub-paragraph + .sub-paragraph { margin-top: 16px; }
-.mobile-overview-checklist-heading {
-  margin: 32px 0 0;
+.mobile-payment-copy p + p { margin-top: 15px; }
+.mobile-payment-copy h3 {
+  margin: 33px 0 12px;
   color: #172f42;
-  font-size: clamp(20px, 2vw, 26px);
+  font-size: clamp(20px, 1.8vw, 24px);
   line-height: 1.4;
-  word-break: keep-all;
 }
-.mobile-payment-overview .sub-card-grid { margin-top: 16px; }
-.mobile-payment-overview .sub-card {
-  min-height: 0;
-  padding: clamp(17px, 2vw, 24px);
-  border-color: #d4e9e4;
-  border-radius: 12px;
-}
-.mobile-overview-card-mark {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #176f68;
-}
-.mobile-overview-card-mark .sub-card-number { color: inherit; }
-.mobile-overview-card-mark svg { width: 24px; height: 24px; }
-.mobile-payment-overview .sub-card h4 {
-  margin: 9px 0 7px;
-  color: #172f42;
-  font-size: 19px;
-  line-height: 1.4;
-  word-break: keep-all;
-}
-.mobile-payment-overview .sub-card p { line-height: 1.75; overflow-wrap: anywhere; }
-.mobile-payment-overview .sub-card p + p { margin-top: 12px; }
+.mobile-payment-copy strong { color: #17645f; }
+.mobile-payment-content .site-faq-list summary h3 { margin: 0; font: inherit; }
 
 .home-faq { background: linear-gradient(160deg, #fff 35%, #f1faf8); }
 .home-faq .section-desc { max-width: 720px; margin-bottom: 28px; }
