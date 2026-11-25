@@ -485,7 +485,7 @@
 }
 @media (max-width: 700px) {
   /* The image comes before the heading on mobile. */
-  #standards { scroll-margin-top: -56px; }
+  #standards { scroll-margin-top: -120px; }
   #standards .big-visual { height: auto; aspect-ratio: 1312 / 1199; }
   #standards .big-visual img { mask-image: none; }
 }
