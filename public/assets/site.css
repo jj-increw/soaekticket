@@ -497,32 +497,86 @@
   overflow-wrap: anywhere;
 }
 #standards .big-text p { margin: 0; }
-#standards .standards-list {
-  max-width: 510px;
-  list-style: none;
-  margin: 22px 0 0;
-  padding: 0;
+#standards .big-text p + p { margin-top: 13px; }
+#standards .big-text strong { color: #e6f8f4; font-weight: 650; }
+#standards .principles-content {
+  max-width: 1160px;
+  padding-block: clamp(44px, 6vw, 86px);
+  text-align: left;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
-#standards .standards-list li {
+#standards .principles-content .section-title { margin-bottom: 12px; }
+#standards .principles-intro { margin: 0 0 27px; color: #435f6a; }
+#standards .principles-accordion { border-bottom: 1px solid #cce5e4; }
+#standards details { border-top: 1px solid #cce5e4; }
+#standards details[open] { background: linear-gradient(140deg, #edf9f6, #f4fbfe); }
+#standards summary {
   display: grid;
-  grid-template-columns: 2ch minmax(0, 1fr);
-  gap: 12px;
-  padding: 12px 0;
-  border-top: 1px solid #a2d8cd45;
-}
-#standards .standards-list li:last-child { padding-bottom: 0; }
-#standards .standards-number {
-  color: #a2d8cd;
-  font-size: 13px;
+  grid-template-columns: 2ch minmax(0, 1fr) 24px;
+  align-items: center;
+  gap: clamp(10px, 1.6vw, 20px);
+  min-height: 60px;
+  padding: 14px clamp(10px, 2.3vw, 28px);
+  list-style: none;
+  color: #193b4a;
+  font-size: clamp(15px, 1.55vw, 19px);
   font-weight: 700;
-  line-height: 24px;
+  line-height: 1.45;
+  cursor: pointer;
 }
-#standards .standards-list h3 {
-  margin: 0 0 4px;
-  color: #fff;
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 24px;
+#standards summary::-webkit-details-marker { display: none; }
+#standards summary:focus-visible { outline: 2px solid #287c8e; outline-offset: -3px; }
+#standards .principles-number { color: #176f68; font-variant-numeric: tabular-nums; }
+#standards .principles-toggle {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  color: #176f68;
+}
+#standards .principles-toggle::before,
+#standards .principles-toggle::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 2px;
+  background: currentColor;
+  content: "";
+  transform: translate(-50%, -50%);
+}
+#standards .principles-toggle::after { transform: translate(-50%, -50%) rotate(90deg); }
+#standards details[open] .principles-toggle::after { display: none; }
+#standards .principles-copy,
+#standards .principles-closing {
+  color: #34535f;
+  font-size: 16px;
+  line-height: 1.9;
+}
+#standards .principles-copy { max-width: 940px; padding: 0 clamp(14px, 4.7vw, 68px) 26px; }
+#standards .principles-copy p,
+#standards .principles-closing p { margin: 0; }
+#standards .principles-copy p + p,
+#standards .principles-closing p + p { margin-top: 13px; }
+#standards .principles-closing { max-width: 920px; margin: 42px auto 0; }
+#standards .principles-closing h3 {
+  margin: 0 0 15px;
+  color: #193b4a;
+  font-size: clamp(20px, 2.4vw, 28px);
+  line-height: 1.45;
+}
+#standards .principles-closing strong { color: #17645f; }
+@media (max-width: 700px) {
+  #standards .big-text h2 { font-size: 28px; }
+  #standards .principles-copy,
+  #standards .principles-closing { font-size: 15px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  #standards details[open] .principles-copy { animation: principles-reveal .22s ease-out; }
+}
+@keyframes principles-reveal {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 #process {
