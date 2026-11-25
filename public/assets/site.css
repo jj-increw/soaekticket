@@ -827,7 +827,7 @@
   word-break: keep-all;
 }
 #limits .mobile-limit-guide {
-  max-width: 880px;
+  max-width: 800px;
   margin: 20px 0 13px;
 }
 #limits .mobile-limit-guide img { display: block; width: 100%; height: auto; }
@@ -836,6 +836,13 @@
   color: #52676d;
   font-size: 13px;
   line-height: 1.6;
+}
+#limits .mobile-limit-guide-hint { display: none; }
+@media (max-width: 700px) {
+  #limits .mobile-limit-guide-view { overflow-x: auto; }
+  #limits .mobile-limit-guide-view:focus-visible { outline: 2px solid #17645f; outline-offset: 2px; }
+  #limits .mobile-limit-guide-view img { width: 720px; max-width: none; }
+  #limits .mobile-limit-guide-hint { display: block; }
 }
 .mobile-payment-copy a {
   color: #17645f;
