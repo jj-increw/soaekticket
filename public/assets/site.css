@@ -819,12 +819,11 @@
   line-height: 1.4;
 }
 .mobile-payment-copy strong { color: #17645f; }
-.mobile-payment-guide-topic {
-  margin-top: 25px;
-  padding-top: 22px;
-  border-top: 1px solid #d4e9e4;
+.mobile-payment-copy a {
+  color: #17645f;
+  text-decoration: underline;
+  text-underline-offset: .18em;
 }
-.mobile-payment-guide-topic h3 { margin-top: 0; }
 
 .home-faq { background: linear-gradient(160deg, #fff 35%, #f1faf8); }
 .home-faq .section-desc { max-width: 720px; margin-bottom: 28px; }
