@@ -775,6 +775,23 @@
   .site-faq-list details p { margin-left: 14px; }
 }
 
+#contact .contact-channel-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 10px 17px;
+  border: 0;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #187d78, #255f98);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+#contact .contact-channel-button:disabled { opacity: .72; cursor: not-allowed; }
+#contact .contact-channel-status { display: block; margin-top: 8px; color: #4e6468; font-size: 12px; }
+#contact .contact-channel-status[hidden] { display: none; }
+
 .channel-talk-fab {
   position: fixed; z-index: 49; right: 22px; bottom: 83px;
   display: inline-flex; align-items: center; justify-content: center; gap: 9px;
@@ -786,6 +803,7 @@
   line-height: 1.15; text-align: left;
 }
 .channel-talk-fab-icon { flex-shrink: 0; font-size: 21px; line-height: 1; }
+.channel-talk-fab:enabled { cursor: pointer; }
 .channel-talk-fab-label { display: block; font-size: 11px; font-weight: 650; white-space: nowrap; }
 .channel-talk-fab-label strong { display: block; margin-top: 3px; font-size: 13px; font-weight: 850; }
 @media (max-width: 700px) {

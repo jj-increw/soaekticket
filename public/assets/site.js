@@ -34,6 +34,22 @@
     addEventListener('scroll',update,{passive:true});update();
     topBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
   }
+  const channelTalkUrl = document.querySelector('#contact[data-channel-talk-url]')?.dataset.channelTalkUrl;
+  let channelTalk;
+  if (channelTalkUrl) {
+    try {
+      channelTalk = new URL(channelTalkUrl);
+    } catch {
+      // Keep both buttons disabled when the configured URL is invalid.
+    }
+  }
+  if (channelTalk?.protocol === 'https:') {
+    document.querySelectorAll('[data-channel-talk-trigger]').forEach(button => {
+      button.disabled = false;
+      button.addEventListener('click', () => window.location.assign(channelTalk.href));
+    });
+    document.querySelectorAll('[data-channel-talk-pending]').forEach(status => { status.hidden = true; });
+  }
   // Homepage-only slider, preserved from V3.
   const slides=[...document.querySelectorAll('.hero-slide')];
   const dots=document.querySelector('.hero-dots');
