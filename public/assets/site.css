@@ -812,6 +812,14 @@
   overflow-wrap: anywhere;
 }
 .mobile-overview-copy .sub-paragraph + .sub-paragraph { margin-top: 16px; }
+.mobile-overview-checklist-heading {
+  margin: 32px 0 0;
+  color: #172f42;
+  font-size: clamp(20px, 2vw, 26px);
+  line-height: 1.4;
+  word-break: keep-all;
+}
+.mobile-payment-overview .sub-card-grid { margin-top: 16px; }
 .mobile-payment-overview .sub-card {
   min-height: 0;
   padding: clamp(17px, 2vw, 24px);
@@ -826,13 +834,15 @@
 }
 .mobile-overview-card-mark .sub-card-number { color: inherit; }
 .mobile-overview-card-mark svg { width: 24px; height: 24px; }
-.mobile-payment-overview .sub-card h3 {
+.mobile-payment-overview .sub-card h4 {
   margin: 9px 0 7px;
   color: #172f42;
+  font-size: 19px;
   line-height: 1.4;
   word-break: keep-all;
 }
 .mobile-payment-overview .sub-card p { line-height: 1.75; overflow-wrap: anywhere; }
+.mobile-payment-overview .sub-card p + p { margin-top: 12px; }
 
 .home-faq { background: linear-gradient(160deg, #fff 35%, #f1faf8); }
 .home-faq .section-desc { max-width: 720px; margin-bottom: 28px; }
