@@ -1067,3 +1067,14 @@
   .credit-guide-figure figcaption { display: block; margin-top: 8px; }
   .credit-guide-figure a { color: #17645f; font-size: 14px; text-decoration: underline; }
 }
+
+.credit-guide-figure .credit-guide-example {
+  display: block;
+  margin-top: 8px;
+  color: #52676d;
+  font-size: 14px;
+  line-height: 1.6;
+}
+@media (min-width: 701px) {
+  .credit-guide-example a { display: none; }
+}
