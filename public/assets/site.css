@@ -1093,7 +1093,7 @@
   border-radius: 0;
   z-index: 1;
   pointer-events: none;
-  background: linear-gradient(90deg, #ffffffa6 0%, #ffffff80 44%, #ffffff40 55%, #ffffff12 73%);
+  background: linear-gradient(90deg, #ffffffd9 0%, #f5ffffc9 58%, #f5ffffb3 89%, #f5ffff82 100%);
 }
 .giftcard-hero .wrap { z-index: 2; }
 .giftcard-hero h1 { color: #102e41; }
@@ -1114,7 +1114,21 @@
   mask-image: linear-gradient(transparent, #000 10%, #000 90%, transparent);
 }
 @media (min-width: 1001px) {
-  .giftcard-hero .page-hero-copy { width: 45%; }
+  .giftcard-hero .wrap {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    min-height: min(33.41vw, 725px);
+    height: auto;
+  }
+  .giftcard-hero .page-hero-copy {
+    width: 100%;
+    max-width: 93%;
+  }
+  .giftcard-hero .page-hero-copy p { max-width: none; }
+  .giftcard-hero .page-hero-copy p:not(:first-of-type):not(:last-of-type) {
+    text-align: justify;
+    text-align-last: left;
+  }
 }
 @media (max-width: 1000px) {
   .page-hero.giftcard-hero { --giftcard-art-height: min(62.5vw, 405px); }
