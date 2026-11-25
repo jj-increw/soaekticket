@@ -874,7 +874,7 @@
 }
 #troubleshooting .mobile-troubleshooting-summary { margin-top: 24px; }
 #billing .mobile-billing-note,
-.credit-card-copy .sub-callout,
+:is(.credit-card-copy, .giftcard-copy) .sub-callout,
 .credit-methods-example {
   margin-top: 30px;
   padding: 17px 0;
@@ -1047,7 +1047,7 @@
   background: #f6fbf9;
 }
 .credit-card-methods .table-scroll:focus-visible { outline: 2px solid #28666a; outline-offset: 3px; }
-.credit-card-copy .sub-callout { border-left: 0; }
+:is(.credit-card-copy, .giftcard-copy) .sub-callout { border-left: 0; }
 .credit-methods-example { padding-inline: 17px; }
 .credit-methods-example p, .credit-methods-example ul { margin: 8px 0 0; }
 .credit-methods-example ul { padding-inline-start: 20px; }
