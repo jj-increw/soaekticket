@@ -819,6 +819,13 @@
   line-height: 1.4;
 }
 .mobile-payment-copy strong { color: #17645f; }
+#limits .mobile-payment-copy h4 {
+  margin: 22px 0 10px;
+  color: #193b4a;
+  font-size: 18px;
+  line-height: 1.45;
+  word-break: keep-all;
+}
 .mobile-payment-copy a {
   color: #17645f;
   text-decoration: underline;
