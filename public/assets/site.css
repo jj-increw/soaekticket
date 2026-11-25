@@ -805,6 +805,10 @@
 .mobile-payment-content { text-align: left; }
 .mobile-payment-content .sub-heading { color: #172f42; }
 .mobile-payment-copy { max-width: 830px; word-break: keep-all; overflow-wrap: anywhere; }
+@media (min-width: 1051px) {
+  .mobile-payment-content > .wrap { width: min(1240px, calc(100% - 56px)); }
+  .mobile-payment-copy { max-width: 1160px; }
+}
 .mobile-payment-copy p {
   margin: 0;
   color: #52676d;
