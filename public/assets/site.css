@@ -1093,16 +1093,17 @@
   border-radius: 0;
   z-index: 1;
   pointer-events: none;
-  background: linear-gradient(90deg, #ffffffd9 0%, #f5ffffc9 58%, #f5ffffb3 89%, #f5ffff82 100%);
+  background: linear-gradient(90deg, rgb(255 255 255 / 80%) 0% 90%, rgb(255 255 255 / 68%) 100%);
 }
 .giftcard-hero .wrap { z-index: 2; }
 .giftcard-hero h1 { color: #102e41; }
 .giftcard-hero .page-hero-copy p {
-  color: #173b4a;
-  font-weight: 500;
-  line-height: 1.7;
+  color: #102b3c;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.8;
 }
-.giftcard-hero strong { color: #086b68; font-weight: 700; }
+.giftcard-hero strong { color: #075b5d; font-weight: 700; }
 .giftcard-hero-image {
   position: absolute;
   inset: 50% auto auto 50%;
@@ -1133,8 +1134,9 @@
 @media (max-width: 1000px) {
   .page-hero.giftcard-hero { --giftcard-art-height: min(62.5vw, 405px); }
   .page-hero.giftcard-hero::before {
-    background: linear-gradient(to bottom, #ffffffc2 0%, #ffffff8c calc(100% - var(--giftcard-art-height)), #ffffff08 100%);
+    background: linear-gradient(to bottom, rgb(255 255 255 / 80%) 0% calc(100% - var(--giftcard-art-height)), rgb(255 255 255 / 65%) 100%);
   }
+  .giftcard-hero .page-hero-copy p { font-size: 15px; }
   .giftcard-hero .wrap { padding-bottom: calc(var(--giftcard-art-height) + 16px); }
   .giftcard-hero-image {
     inset: auto auto 0 82%;
