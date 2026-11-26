@@ -1271,48 +1271,73 @@
   .faq-page-hero ~ #contact .soft-link { width: 100%; text-align: center; }
 }
 
-/* Homepage section typography */
-main > :is(#about, #services, #standards, #process, #faq, #contact) {
-  --home-prose-size: clamp(15px, 1.2vw, 17px);
-  --home-prose-leading: 1.9;
+/* Homepage document typography, aligned with the mobile payment guide. */
+.home-document {
+  --document-width: 960px;
+  --document-font-size: clamp(15px, 1.2vw, 17px);
+  --document-leading: 1.9;
+  --document-paragraph-gap: 15px;
 }
-main > :is(#about, #services, #standards, #process, #faq, #contact) :is(h2, h3) {
+.home-document :is(#about > .wrap > :is(.eyebrow, .section-title, .about-copy),
+  #services .program-head, #standards .principles-content > :is(.eyebrow, .section-title, .principles-intro, .principles-closing),
+  #process .process-intro > :is(.eyebrow, .section-title, .section-desc),
+  #faq > .wrap > :is(.eyebrow, .section-title, .section-desc)) {
+  width: 100%;
+  max-width: var(--document-width);
+  margin-inline: auto;
+  text-align: left;
+}
+.home-document #services .program-eyebrow { justify-content: flex-start; }
+.home-document :is(#about, #services, #process, #faq) .section-title,
+.home-document :is(#standards, #contact) h2 {
+  margin-block: 19px 26px;
+  font-size: clamp(25px, 2.65vw, 37px);
+  line-height: 1.4;
+  letter-spacing: -.065em;
   word-break: keep-all;
   overflow-wrap: anywhere;
 }
-main > :is(#about, #services, #standards, #process, #faq) .section-title,
-main > #contact.contact h2 {
-  margin-block: 16px 14px;
-  line-height: 1.35;
+.home-document :is(#about .about-details, #standards .principles-closing) h3,
+.home-document #standards .principles-content .section-title {
+  margin-block: 33px 12px;
+  font-size: clamp(20px, 1.8vw, 24px);
+  line-height: 1.4;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  text-align: left;
 }
-main > #services .program-head { text-align: left; }
-main > #services .program-eyebrow { justify-content: flex-start; }
-main > #about .about-details .about-summary h3 { text-align: left; }
-main > #about .about-copy,
-main > #standards :is(.big-text p, .principles-intro, .principles-copy, .principles-closing),
-main > :is(#services, #process, #faq) .section-desc,
-main > #contact.contact p {
-  font-size: var(--home-prose-size);
-  line-height: var(--home-prose-leading);
+.home-document :is(#about .about-copy, #standards .principles-copy,
+  #standards .principles-closing, #standards .principles-intro,
+  #standards .big-text p, #services .program-head .section-desc,
+  #process .process-intro .section-desc, #faq .section-desc, #contact.contact p) {
+  font-size: var(--document-font-size);
+  line-height: var(--document-leading);
   word-break: keep-all;
   overflow-wrap: anywhere;
 }
-main > #services .program-head .section-desc { max-width: 850px; margin-inline: 0; }
-main > #about .about-copy p + p,
-main > #standards :is(.big-text, .principles-copy, .principles-closing) p + p { margin-top: 15px; }
-main > #services .program-card h3 { line-height: 1.35; }
-main > #services .program-card p {
+.home-document :is(#about .about-copy, #standards .big-text,
+  #standards .principles-copy, #standards .principles-closing) p { margin-block: 0; }
+.home-document :is(#about .about-copy, #standards .big-text,
+  #standards .principles-copy, #standards .principles-closing) p + p {
+  margin-block-start: var(--document-paragraph-gap);
+}
+.home-document #process .process-intro > :is(.section-title, .section-desc) {
+  padding-inline-end: 30%;
+}
+.home-document #services .program-head .section-desc { max-width: none; }
+.home-document #services .program-card h3 { line-height: 1.35; }
+.home-document #services .program-card p {
   max-width: none;
   font-size: 14px;
   line-height: 1.8;
   overflow-wrap: anywhere;
 }
-@media (min-width: 701px) {
-  main > #process .process-intro .section-title { max-width: min(680px, 68%); }
-}
 @media (max-width: 700px) {
-  main > #process > .wrap { width: calc(100% - 36px); }
-  main > :is(#about, #services, #standards, #process, #faq, #contact) h2 {
-    font-size: clamp(25px, 7.4vw, 30px);
+  .home-document #process > .wrap { width: calc(100% - 36px); }
+  .home-document :is(#about, #services, #process, #faq) .section-title,
+  .home-document :is(#standards, #contact) h2 {
+    margin-block: 15px 20px;
+    font-size: 27px;
   }
+  .home-document #process .process-intro > :is(.section-title, .section-desc) { padding-inline-end: 0; }
 }
