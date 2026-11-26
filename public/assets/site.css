@@ -1270,3 +1270,49 @@
   .faq-page-hero ~ #contact .contact-info-panel { align-items: stretch; padding: 22px; gap: 20px; }
   .faq-page-hero ~ #contact .soft-link { width: 100%; text-align: center; }
 }
+
+/* Homepage section typography */
+main > :is(#about, #services, #standards, #process, #faq, #contact) {
+  --home-prose-size: clamp(15px, 1.2vw, 17px);
+  --home-prose-leading: 1.9;
+}
+main > :is(#about, #services, #standards, #process, #faq, #contact) :is(h2, h3) {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+main > :is(#about, #services, #standards, #process, #faq) .section-title,
+main > #contact.contact h2 {
+  margin-block: 16px 14px;
+  line-height: 1.35;
+}
+main > #services .program-head { text-align: left; }
+main > #services .program-eyebrow { justify-content: flex-start; }
+main > #about .about-details .about-summary h3 { text-align: left; }
+main > #about .about-copy,
+main > #standards :is(.big-text p, .principles-intro, .principles-copy, .principles-closing),
+main > :is(#services, #process, #faq) .section-desc,
+main > #contact.contact p {
+  font-size: var(--home-prose-size);
+  line-height: var(--home-prose-leading);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+main > #services .program-head .section-desc { max-width: 850px; margin-inline: 0; }
+main > #about .about-copy p + p,
+main > #standards :is(.big-text, .principles-copy, .principles-closing) p + p { margin-top: 15px; }
+main > #services .program-card h3 { line-height: 1.35; }
+main > #services .program-card p {
+  max-width: none;
+  font-size: 14px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+@media (min-width: 701px) {
+  main > #process .process-intro .section-title { max-width: min(680px, 68%); }
+}
+@media (max-width: 700px) {
+  main > #process > .wrap { width: calc(100% - 36px); }
+  main > :is(#about, #services, #standards, #process, #faq, #contact) h2 {
+    font-size: clamp(25px, 7.4vw, 30px);
+  }
+}
