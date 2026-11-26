@@ -738,22 +738,22 @@
   #process .process-step:hover { transform: translateY(-2px); box-shadow: 0 10px 19px #248e8426; }
 }
 
-.page-hero:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero) {
+.page-hero:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero, .guide-page-hero) {
   border: 0;
   background: linear-gradient(155deg, #f7fcfb, #e3f4f0);
 }
-:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero)::before,
-:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero)::after { content: none; }
-:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero) .wrap {
+:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero, .guide-page-hero)::before,
+:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero, .guide-page-hero)::after { content: none; }
+:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero, .guide-page-hero) .wrap {
   display: flex;
   width: min(1440px, calc(100% - 8%));
   min-height: max(520px, 46.5vw);
   padding-block: clamp(28px, 4vw, 54px);
 }
-:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero) .page-hero-copy { width: 52%; text-align: left; overflow-wrap: anywhere; }
-:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero) h1 span { color: #0b7469; }
-:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero) p { max-width: 630px; margin: 0; font-size: clamp(15px, 1.25vw, 17px); }
-:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero) p + p { margin-top: 14px; }
+:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero, .guide-page-hero) .page-hero-copy { width: 52%; text-align: left; overflow-wrap: anywhere; }
+:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero, .guide-page-hero) h1 span { color: #0b7469; }
+:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero, .guide-page-hero) p { max-width: 630px; margin: 0; font-size: clamp(15px, 1.25vw, 17px); }
+:is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero, .guide-page-hero) p + p { margin-top: 14px; }
 .mobile-payment-hero-points {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -788,8 +788,8 @@
   object-position: right bottom;
 }
 @media (max-width: 1000px) {
-  :is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero) .wrap { display: block; width: min(670px, calc(100% - 36px)); min-height: 0; padding-bottom: 14px; }
-  :is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero) .page-hero-copy { width: auto; }
+  :is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero, .guide-page-hero) .wrap { display: block; width: min(670px, calc(100% - 36px)); min-height: 0; padding-bottom: 14px; }
+  :is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero, .guide-page-hero) .page-hero-copy { width: auto; }
   .mobile-payment-hero-image {
     position: relative;
     height: auto;
@@ -798,7 +798,7 @@
   }
 }
 @media (max-width: 700px) {
-  :is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero) h1 { font-size: clamp(30px, 8vw, 38px); }
+  :is(.mobile-payment-hero, .credit-card-hero, .giftcard-hero, .guide-page-hero) h1 { font-size: clamp(30px, 8vw, 38px); }
   .mobile-payment-hero-points { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
@@ -1161,4 +1161,38 @@
 @media (max-width: 768px) {
   .giftcard-content .content-visual { margin-block: 24px 28px; }
   .giftcard-content .content-visual img { border-radius: 18px; }
+}
+
+.page-hero.guide-page-hero { background: linear-gradient(#f4fbfe, #e0f7fa); }
+.guide-page-hero .wrap { min-height: min(33.41vw, 725px); }
+.guide-page-hero .page-hero-copy { width: 48%; }
+.guide-page-hero h1 { color: #102e41; font-weight: 800; }
+.guide-page-hero .page-hero-copy p {
+  color: #173b4a;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.75;
+}
+.guide-page-hero strong { color: #086b68; font-weight: 700; }
+.guide-page-hero-image {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  display: block;
+  width: min(100%, 2170px);
+  height: auto;
+  transform: translate(-50%, -50%);
+  mask-image: linear-gradient(transparent, #000 5% 95%, transparent);
+}
+@media (max-width: 1000px) {
+  .guide-page-hero .wrap { min-height: 0; }
+  .guide-page-hero .page-hero-copy { width: 100%; }
+  .guide-page-hero .page-hero-copy p { font-size: 15px; }
+  .guide-page-hero-image {
+    position: relative;
+    inset: auto auto auto 85%;
+    width: 190%;
+    max-width: none;
+    transform: translateX(-85%);
+    mask-image: linear-gradient(transparent, #000 6%);
+  }
 }
