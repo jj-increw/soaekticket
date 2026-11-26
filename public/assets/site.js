@@ -26,6 +26,17 @@
     document.addEventListener('click',e=>{if(!header.contains(e.target))closeAll()});
     document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeAll();mobileToggle.focus()}});
     shell.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeAll));
+    const pagePath = pathname => pathname.replace(/\.html$/, '').replace(/\/index$/, '/');
+    shell.querySelectorAll('.primary-link').forEach(link => {
+      link.addEventListener('click', event => {
+        if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey ||
+            event.shiftKey || event.altKey || pagePath(location.pathname) !== pagePath(new URL(link.href).pathname)) return;
+        event.preventDefault();
+        if (location.href !== link.href) history.pushState(null, '', link.href);
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      });
+    });
+
     media.addEventListener('change',closeAll);window.addEventListener('hashchange',closeAll);
   }
   const topBtn=document.querySelector('.top-button');

@@ -37,10 +37,10 @@
 .primary-item{position:relative;min-width:0}
 .primary-item+.primary-item:before{content:'';position:absolute;left:0;top:18px;height:22px;width:1px;background:#eceeed}
 .primary-tab{background:none;border:0;width:100%;height:100%;padding:0 7px;display:flex;gap:5px;align-items:center;justify-content:center;font-size:15px;font-weight:690;letter-spacing:-.05em;color:#304150;white-space:nowrap;transition:color .15s,background-color .15s}
-.primary-tab:hover,.primary-tab:focus-visible{color:#b96b2d;background:#faf5ed;outline-offset:-3px}
-.primary-tab[aria-expanded="true"]{background:#efa24e;color:#fff}
+.primary-tab:hover,.primary-tab:focus-within{color:#b96b2d;background:#faf5ed;outline-offset:-3px}
+.primary-item.is-selected > .primary-tab{background:#efa24e;color:#fff}
 .tab-caret{font-size:14px;opacity:.65;transition:transform .22s}
-.primary-tab[aria-expanded="true"] .tab-caret{transform:rotate(180deg)}
+.primary-submenu-toggle[aria-expanded="true"] .tab-caret{transform:rotate(180deg)}
 .mobile-submenu{display:none}
 .mega-menu{position:absolute;top:100%;left:0;right:0;display:none;z-index:210;background:#fff;border-top:1px solid #ebe8e4;box-shadow:0 20px 35px rgba(22,40,47,.15)}
 .mega-menu.is-open{display:block;animation:menuDown .16s ease-out}
@@ -94,7 +94,7 @@
  .primary-item+.primary-item:before{display:none}
  .primary-item{border-bottom:1px solid #e8edeb}
  .primary-tab{height:55px;justify-content:space-between;font-size:15px;padding:0 7px}
- .primary-tab[aria-expanded="true"]{background:#fff;color:#ce762f}
+ .primary-item.is-selected > .primary-tab{background:#fff;color:#ce762f}
  .tab-caret{font-size:20px}
  .mobile-submenu{display:none;padding:2px 5px 15px 18px;background:#fafaf8}
  .primary-item.is-selected .mobile-submenu{display:flex;flex-direction:column;gap:0}
@@ -1344,3 +1344,22 @@
 
 /* The document scroll padding already accounts for the introduction anchors. */
 .home-document > :is(#about, #process) { scroll-margin-top: 0; }
+
+.primary-link { display: flex; align-items: center; min-height: 44px; color: inherit; }
+.primary-submenu-toggle {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.primary-link:focus-visible,
+.primary-submenu-toggle:focus-visible { outline: 2px solid currentColor; outline-offset: -2px; }
+@media (max-width: 1050px) {
+  .primary-link { flex: 1; height: 100%; }
+  .primary-submenu-toggle { width: 44px; }
+}
