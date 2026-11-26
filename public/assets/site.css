@@ -1201,3 +1201,41 @@
 @media (min-width: 701px) {
   .guide-steps .sub-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+.guide-visual {
+  display: block;
+  width: min(100%, 820px);
+  margin: 32px auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #17645f;
+  font: inherit;
+  cursor: zoom-in;
+}
+.guide-visual img { display: block; width: 100%; height: auto; }
+.guide-visual span { display: block; margin-top: 8px; font-size: 14px; text-decoration: underline; }
+.guide-image-dialog {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(1200px, calc(100% - 32px));
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  color: #173b4a;
+}
+.guide-image-dialog::backdrop { background: rgb(16 46 65 / 75%); }
+.guide-image-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 12px; }
+.guide-image-toolbar button {
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid #a4cdcb;
+  border-radius: 6px;
+  background: #fff;
+  color: #0c4f55;
+  cursor: pointer;
+}
+.guide-image-scroll { overflow: auto; overscroll-behavior: contain; max-height: calc(100dvh - 96px); }
+.guide-image-scroll img { display: block; max-width: none; height: auto; }
