@@ -823,30 +823,30 @@
   }
 }
 
-:is(.mobile-payment-content, .credit-card-content, .giftcard-content) { text-align: left; }
-:is(.mobile-payment-content, .credit-card-content, .giftcard-content) > .wrap > :is(.section-eyebrow, .sub-heading, .mobile-payment-copy, .credit-card-copy, .giftcard-copy, .sub-card-grid, .credit-methods-example, .table-scroll) {
+:is(.mobile-payment-content, .credit-card-content, .giftcard-content, .guide-steps) { text-align: left; }
+:is(.mobile-payment-content, .credit-card-content, .giftcard-content, .guide-steps) > .wrap > :is(.section-eyebrow, .sub-heading, .mobile-payment-copy, .credit-card-copy, .giftcard-copy, .guide-steps-copy, .sub-card-grid, .credit-methods-example, .table-scroll) {
   max-width: 960px;
   margin-inline: auto;
 }
-:is(.mobile-payment-content, .credit-card-content, .giftcard-content) .sub-heading { color: #172f42; }
-:is(.mobile-payment-copy, .credit-card-copy, .giftcard-copy) { word-break: keep-all; overflow-wrap: anywhere; }
+:is(.mobile-payment-content, .credit-card-content, .giftcard-content, .guide-steps) .sub-heading { color: #172f42; }
+:is(.mobile-payment-copy, .credit-card-copy, .giftcard-copy, .guide-steps-copy) { word-break: keep-all; overflow-wrap: anywhere; }
 @media (min-width: 1051px) {
-  :is(.mobile-payment-content, .credit-card-content, .giftcard-content) > .wrap { width: min(1200px, calc(100% - 56px)); }
+  :is(.mobile-payment-content, .credit-card-content, .giftcard-content, .guide-steps) > .wrap { width: min(1200px, calc(100% - 56px)); }
 }
-:is(.mobile-payment-copy, .credit-card-copy, .giftcard-copy) p {
+:is(.mobile-payment-copy, .credit-card-copy, .giftcard-copy, .guide-steps-copy) p {
   margin: 0;
   color: #52676d;
   font-size: clamp(15px, 1.2vw, 17px);
   line-height: 1.9;
 }
-:is(.mobile-payment-copy, .credit-card-copy, .giftcard-copy) p + p { margin-top: 15px; }
-:is(.mobile-payment-copy, .credit-card-copy, .giftcard-copy) h3 {
+:is(.mobile-payment-copy, .credit-card-copy, .giftcard-copy, .guide-steps-copy) p + p { margin-top: 15px; }
+:is(.mobile-payment-copy, .credit-card-copy, .giftcard-copy, .guide-steps-copy) h3 {
   margin: 33px 0 12px;
   color: #172f42;
   font-size: clamp(20px, 1.8vw, 24px);
   line-height: 1.4;
 }
-:is(.mobile-payment-copy, .credit-card-copy, .giftcard-copy) strong { color: #17645f; }
+:is(.mobile-payment-copy, .credit-card-copy, .giftcard-copy, .guide-steps-copy) strong { color: #17645f; }
 .mobile-payment-copy .mobile-payment-illustration {
   max-width: 1000px;
   margin: 22px auto 0;
@@ -865,8 +865,8 @@
   .mobile-payment-illustration a { color: #17645f; font-size: 14px; text-decoration: underline; }
 }
 #troubleshooting .mobile-payment-copy p { line-height: 1.8; }
-:is(#troubleshooting, .credit-card-overview, .giftcard-content) .sub-card-grid { margin-top: 4px; }
-:is(#troubleshooting, .credit-card-overview, .giftcard-content) .sub-card h4 {
+:is(#troubleshooting, .credit-card-overview, .giftcard-content, .guide-steps) .sub-card-grid { margin-top: 4px; }
+:is(#troubleshooting, .credit-card-overview, .giftcard-content, .guide-steps) .sub-card h4 {
   margin: 18px 0 12px;
   font-size: 19px;
   letter-spacing: -.05em;
