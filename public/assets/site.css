@@ -1196,3 +1196,8 @@
     mask-image: linear-gradient(transparent, #000 6%);
   }
 }
+
+.guide-steps .sub-card-grid { grid-auto-rows: 1fr; }
+@media (min-width: 701px) {
+  .guide-steps .sub-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
