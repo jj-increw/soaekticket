@@ -1259,3 +1259,13 @@
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+.faq-page-hero ~ #contact .contact-info-panel { align-items: center; text-align: left; }
+.faq-page-hero ~ #contact .contact-info-panel p { margin: 0; line-height: 1.85; }
+.faq-page-hero ~ #contact .contact-info-panel p + p { margin-top: 12px; }
+.faq-page-hero ~ #contact .contact-info-panel strong { color: #0c4f55; }
+.faq-page-hero ~ #contact .contact-channel-actions { flex: 0 0 auto; }
+@media (max-width: 700px) {
+  .faq-page-hero ~ #contact .contact-info-panel { align-items: stretch; padding: 22px; gap: 20px; }
+  .faq-page-hero ~ #contact .soft-link { width: 100%; text-align: center; }
+}
