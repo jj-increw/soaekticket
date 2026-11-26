@@ -1239,3 +1239,23 @@
 }
 .guide-image-scroll { overflow: auto; overscroll-behavior: contain; max-height: calc(100dvh - 96px); }
 .guide-image-scroll img { display: block; max-width: none; height: auto; }
+
+.page-hero.faq-page-hero { background: #eef9fb; border: 0; }
+.faq-page-hero::before,
+.faq-page-hero::after { content: none; }
+.faq-page-hero img {
+  display: block;
+  width: min(100%, 2170px);
+  height: auto;
+  margin-inline: auto;
+}
+.faq-page-hero h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
