@@ -823,30 +823,30 @@
   }
 }
 
-:is(.mobile-payment-content, .credit-card-content, .giftcard-content, .guide-steps, .guide-content) { text-align: left; }
-:is(.mobile-payment-content, .credit-card-content, .giftcard-content, .guide-steps, .guide-content) > .wrap > :is(.section-eyebrow, .sub-heading, .mobile-payment-copy, .credit-card-copy, .giftcard-copy, .guide-steps-copy, .sub-card-grid, .credit-methods-example, .table-scroll) {
+:is(.mobile-payment-content, .credit-card-content, .giftcard-content, .guide-steps, .guide-content, .home-intro) { text-align: left; }
+:is(.mobile-payment-content, .credit-card-content, .giftcard-content, .guide-steps, .guide-content, .home-intro) > .wrap > :is(.section-eyebrow, .sub-heading, .mobile-payment-copy, .credit-card-copy, .giftcard-copy, .guide-steps-copy, .home-intro-copy, .sub-card-grid, .credit-methods-example, .table-scroll) {
   max-width: 960px;
   margin-inline: auto;
 }
-:is(.mobile-payment-content, .credit-card-content, .giftcard-content, .guide-steps, .guide-content) .sub-heading { color: #172f42; }
-:is(.mobile-payment-copy, .credit-card-copy, .giftcard-copy, .guide-steps-copy) { word-break: keep-all; overflow-wrap: anywhere; }
+:is(.mobile-payment-content, .credit-card-content, .giftcard-content, .guide-steps, .guide-content, .home-intro) .sub-heading { color: #172f42; }
+:is(.mobile-payment-copy, .credit-card-copy, .giftcard-copy, .guide-steps-copy, .home-intro-copy) { word-break: keep-all; overflow-wrap: anywhere; }
 @media (min-width: 1051px) {
-  :is(.mobile-payment-content, .credit-card-content, .giftcard-content, .guide-steps, .guide-content) > .wrap { width: min(1200px, calc(100% - 56px)); }
+  :is(.mobile-payment-content, .credit-card-content, .giftcard-content, .guide-steps, .guide-content, .home-intro) > .wrap { width: min(1200px, calc(100% - 56px)); }
 }
-:is(.mobile-payment-copy, .credit-card-copy, .giftcard-copy, .guide-steps-copy) p {
+:is(.mobile-payment-copy, .credit-card-copy, .giftcard-copy, .guide-steps-copy, .home-intro-copy) p {
   margin: 0;
   color: #52676d;
   font-size: clamp(15px, 1.2vw, 17px);
   line-height: 1.9;
 }
-:is(.mobile-payment-copy, .credit-card-copy, .giftcard-copy, .guide-steps-copy) p + p { margin-top: 15px; }
-:is(.mobile-payment-copy, .credit-card-copy, .giftcard-copy, .guide-steps-copy) h3 {
+:is(.mobile-payment-copy, .credit-card-copy, .giftcard-copy, .guide-steps-copy, .home-intro-copy) p + p { margin-top: 15px; }
+:is(.mobile-payment-copy, .credit-card-copy, .giftcard-copy, .guide-steps-copy, .home-intro-copy) h3 {
   margin: 33px 0 12px;
   color: #172f42;
   font-size: clamp(20px, 1.8vw, 24px);
   line-height: 1.4;
 }
-:is(.mobile-payment-copy, .credit-card-copy, .giftcard-copy, .guide-steps-copy) strong { color: #17645f; }
+:is(.mobile-payment-copy, .credit-card-copy, .giftcard-copy, .guide-steps-copy, .home-intro-copy) strong { color: #17645f; }
 .mobile-payment-copy .mobile-payment-illustration {
   max-width: 1000px;
   margin: 22px auto 0;
@@ -1344,3 +1344,7 @@
 
 /* The document scroll padding already accounts for the introduction anchors. */
 .home-document > :is(#about, #process) { scroll-margin-top: 0; }
+
+.home-document > .home-intro { scroll-margin-top: 0; }
+.home-intro .home-intro-copy p { line-height: 1.8; }
+.home-intro .home-intro-copy p + p { margin-top: 20px; }
